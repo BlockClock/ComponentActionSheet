@@ -14,11 +14,14 @@ import { IonicPage, NavController, NavParams, ActionSheetController } from 'ioni
 })
 export class HomePage {
 
+  text: string;
+
   constructor(public navCtrl: NavController, public navParams: NavParams, public actionSheetCtrl: ActionSheetController) {
   }
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad HomePage');
+    this.text = "尚未操作"
   }
 
   clickEvent() {
@@ -31,22 +34,26 @@ export class HomePage {
           role: 'destructive',
           handler: () => {
             console.log('操作A');
+            this.text = "操作A"
           }
         },{
           text: '操作B',
           handler: () => {
             console.log('操作B');
+            this.text = "操作B"
           }
         },{
           text: '操作C',
           handler: () => {
             console.log('操作C');
+            this.text = "操作C"
           }
         },{
           text: '取消操作',
           role: 'cancel',
           handler: () => {
             console.log('取消操作');
+            this.text = "取消操作"
           }
         }
       ]});
