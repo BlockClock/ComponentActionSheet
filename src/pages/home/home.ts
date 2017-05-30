@@ -24,7 +24,32 @@ export class HomePage {
   clickEvent() {
     console.log('上拉菜单事件被触发!');
     let actionSheet = this.actionSheetCtrl.create({
-      title: '上拉菜单'});
+      title: '上拉菜单',
+      buttons: [
+        {
+          text: '操作A',
+          role: 'destructive',
+          handler: () => {
+            console.log('操作A');
+          }
+        },{
+          text: '操作B',
+          handler: () => {
+            console.log('操作B');
+          }
+        },{
+          text: '操作C',
+          handler: () => {
+            console.log('操作C');
+          }
+        },{
+          text: '取消操作',
+          role: 'cancel',
+          handler: () => {
+            console.log('取消操作');
+          }
+        }
+      ]});
     actionSheet.present();
   }
 }
