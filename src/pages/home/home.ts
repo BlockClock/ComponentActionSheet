@@ -21,4 +21,7 @@ export class HomePage {
     console.log('ionViewDidLoad HomePage');
   }
 
+  clickEvent() {
+    console.log('上拉菜单事件被触发!');
+  }
 }
