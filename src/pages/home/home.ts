@@ -23,5 +23,8 @@ export class HomePage {
 
   clickEvent() {
     console.log('上拉菜单事件被触发!');
+    let actionSheet = this.actionSheetCtrl.create({
+      title: '上拉菜单'});
+    actionSheet.present();
   }
 }
